@@ -1,0 +1,362 @@
+--[=[
+ d888b  db    db d888888b      .d888b.      db      db    db  .d8b.  
+88' Y8b 88    88   `88'        VP  `8D      88      88    88 d8' `8b 
+88      88    88    88            odD'      88      88    88 88ooo88 
+88  ooo 88    88    88          .88'        88      88    88 88~~~88 
+88. ~8~ 88b  d88   .88.        j88.         88booo. 88b  d88 88   88    @uniquadev
+ Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
+]=]
+
+-- Instances: 23 | Scripts: 7 | Modules: 0
+local G2L = {};
+
+-- StarterGui.TowerOfHellGUI
+G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+G2L["1"]["IgnoreGuiInset"] = true;
+G2L["1"]["ScreenInsets"] = Enum.ScreenInsets.DeviceSafeInsets;
+G2L["1"]["Name"] = [[TowerOfHellGUI]];
+G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+
+-- StarterGui.TowerOfHellGUI.Main
+G2L["2"] = Instance.new("Frame", G2L["1"]);
+G2L["2"]["Visible"] = false;
+G2L["2"]["BorderSizePixel"] = 0;
+G2L["2"]["BackgroundColor3"] = Color3.fromRGB(28, 28, 28);
+G2L["2"]["Size"] = UDim2.new(0, 1624, 0, 797);
+G2L["2"]["Position"] = UDim2.new(-0.00036, 0, 0, 0);
+G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2"]["Name"] = [[Main]];
+G2L["2"]["BackgroundTransparency"] = 0.5;
+
+-- StarterGui.TowerOfHellGUI.Main.Welcome
+G2L["3"] = Instance.new("TextLabel", G2L["2"]);
+G2L["3"]["TextWrapped"] = true;
+G2L["3"]["BorderSizePixel"] = 0;
+G2L["3"]["TextScaled"] = true;
+G2L["3"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3"]["TextSize"] = 30;
+G2L["3"]["FontFace"] = Font.new([[rbxasset://fonts/families/IndieFlower.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["3"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3"]["BackgroundTransparency"] = 1;
+G2L["3"]["Size"] = UDim2.new(0, 201, 0, 23);
+G2L["3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3"]["Name"] = [[Welcome]];
+G2L["3"]["Position"] = UDim2.new(0.09098, 0, 0.14704, 0);
+
+-- StarterGui.TowerOfHellGUI.Main.Welcome.WelcomePlayerScript
+G2L["4"] = Instance.new("LocalScript", G2L["3"]);
+G2L["4"]["Name"] = [[WelcomePlayerScript]];
+
+-- StarterGui.TowerOfHellGUI.Main.ImageLabel
+G2L["5"] = Instance.new("ImageLabel", G2L["2"]);
+G2L["5"]["BorderSizePixel"] = 0;
+G2L["5"]["BackgroundColor3"] = Color3.fromRGB(30, 30, 30);
+G2L["5"]["Image"] = [[rbxasset://textures/ui/GuiImagePlaceholder.png]];
+G2L["5"]["Size"] = UDim2.new(0, 64, 0, 64);
+G2L["5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5"]["Position"] = UDim2.new(0.03152, 0, 0.1208, 0);
+
+-- StarterGui.TowerOfHellGUI.Main.ImageLabel.SetProfilePictureScript
+G2L["6"] = Instance.new("LocalScript", G2L["5"]);
+G2L["6"]["Name"] = [[SetProfilePictureScript]];
+
+-- StarterGui.TowerOfHellGUI.Main.TextLabel
+G2L["7"] = Instance.new("TextLabel", G2L["2"]);
+G2L["7"]["BorderSizePixel"] = 0;
+G2L["7"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7"]["TextSize"] = 35;
+G2L["7"]["FontFace"] = Font.new([[rbxasset://fonts/families/Fondamento.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["7"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7"]["BackgroundTransparency"] = 1;
+G2L["7"]["Size"] = UDim2.new(0, 255, 0, 83);
+G2L["7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7"]["Text"] = [[Tower Of Hell GUI]];
+G2L["7"]["Position"] = UDim2.new(0, 0, 0.01757, 0);
+
+-- StarterGui.TowerOfHellGUI.Main.Main
+G2L["8"] = Instance.new("Frame", G2L["2"]);
+G2L["8"]["BorderSizePixel"] = 0;
+G2L["8"]["BackgroundColor3"] = Color3.fromRGB(26, 26, 26);
+G2L["8"]["Size"] = UDim2.new(0, 627, 0, 148);
+G2L["8"]["Position"] = UDim2.new(0.031, 0, 0.77164, 0);
+G2L["8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["8"]["Name"] = [[Main]];
+
+-- StarterGui.TowerOfHellGUI.Main.Main.UICorner
+G2L["9"] = Instance.new("UICorner", G2L["8"]);
+
+
+-- StarterGui.TowerOfHellGUI.Main.Main.LocalScript
+G2L["a"] = Instance.new("LocalScript", G2L["8"]);
+
+
+-- StarterGui.TowerOfHellGUI.Main.Main.Reset
+G2L["b"] = Instance.new("TextButton", G2L["8"]);
+G2L["b"]["BorderSizePixel"] = 0;
+G2L["b"]["TextSize"] = 21;
+G2L["b"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["b"]["BackgroundColor3"] = Color3.fromRGB(16, 16, 16);
+G2L["b"]["FontFace"] = Font.new([[rbxasset://fonts/families/IndieFlower.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["b"]["Size"] = UDim2.new(0, 69, 0, 68);
+G2L["b"]["Name"] = [[Reset]];
+G2L["b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["b"]["Text"] = [[Reset]];
+G2L["b"]["Position"] = UDim2.new(0.03481, 0, 0.45265, 0);
+
+-- StarterGui.TowerOfHellGUI.Main.Main.Reset.ResetPlayerScript
+G2L["c"] = Instance.new("LocalScript", G2L["b"]);
+G2L["c"]["Name"] = [[ResetPlayerScript]];
+
+-- StarterGui.TowerOfHellGUI.Main.Main.Reset.UICorner
+G2L["d"] = Instance.new("UICorner", G2L["b"]);
+
+
+-- StarterGui.TowerOfHellGUI.Main.Main.TextLabel
+G2L["e"] = Instance.new("TextLabel", G2L["8"]);
+G2L["e"]["TextWrapped"] = true;
+G2L["e"]["BorderSizePixel"] = 0;
+G2L["e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["e"]["TextSize"] = 24;
+G2L["e"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["e"]["BackgroundTransparency"] = 1;
+G2L["e"]["Size"] = UDim2.new(0, 79, 0, 30);
+G2L["e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["e"]["Text"] = [[Main]];
+G2L["e"]["Position"] = UDim2.new(0.0164, 0, 0.15017, 0);
+
+-- StarterGui.TowerOfHellGUI.Main.Main.GodMode
+G2L["f"] = Instance.new("TextButton", G2L["8"]);
+G2L["f"]["BorderSizePixel"] = 0;
+G2L["f"]["TextSize"] = 21;
+G2L["f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["f"]["BackgroundColor3"] = Color3.fromRGB(16, 16, 16);
+G2L["f"]["FontFace"] = Font.new([[rbxasset://fonts/families/IndieFlower.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["f"]["Size"] = UDim2.new(0, 152, 0, 68);
+G2L["f"]["Name"] = [[GodMode]];
+G2L["f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["f"]["Text"] = [[Disable Collishion]];
+G2L["f"]["Position"] = UDim2.new(0.15704, 0, 0.45265, 0);
+
+-- StarterGui.TowerOfHellGUI.Main.Main.GodMode.UICorner
+G2L["10"] = Instance.new("UICorner", G2L["f"]);
+
+
+-- StarterGui.TowerOfHellGUI.Main.Main.GodMode.GodModeCollisionScript
+G2L["11"] = Instance.new("LocalScript", G2L["f"]);
+G2L["11"]["Name"] = [[GodModeCollisionScript]];
+
+-- StarterGui.TowerOfHellGUI.Main.Main.InfiniteJump
+G2L["12"] = Instance.new("TextButton", G2L["8"]);
+G2L["12"]["BorderSizePixel"] = 0;
+G2L["12"]["TextSize"] = 21;
+G2L["12"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["12"]["BackgroundColor3"] = Color3.fromRGB(16, 16, 16);
+G2L["12"]["FontFace"] = Font.new([[rbxasset://fonts/families/IndieFlower.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["12"]["Size"] = UDim2.new(0, 153, 0, 67);
+G2L["12"]["Name"] = [[InfiniteJump]];
+G2L["12"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["12"]["Text"] = [[INFJump]];
+G2L["12"]["Position"] = UDim2.new(0.42035, 0, 0.4594, 0);
+
+-- StarterGui.TowerOfHellGUI.Main.Main.InfiniteJump.InfiniteJumpScript
+G2L["13"] = Instance.new("LocalScript", G2L["12"]);
+G2L["13"]["Name"] = [[InfiniteJumpScript]];
+
+-- StarterGui.TowerOfHellGUI.Main.Main.InfiniteJump.UICorner
+G2L["14"] = Instance.new("UICorner", G2L["12"]);
+
+
+-- StarterGui.TowerOfHellGUI.Open/Close
+G2L["15"] = Instance.new("TextButton", G2L["1"]);
+G2L["15"]["BorderSizePixel"] = 0;
+G2L["15"]["TextSize"] = 14;
+G2L["15"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["15"]["BackgroundColor3"] = Color3.fromRGB(27, 27, 27);
+G2L["15"]["FontFace"] = Font.new([[rbxasset://fonts/families/FredokaOne.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["15"]["Size"] = UDim2.new(0, 107, 0, 30);
+G2L["15"]["Name"] = [[Open/Close]];
+G2L["15"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["15"]["Text"] = [[Open]];
+G2L["15"]["Position"] = UDim2.new(0.90722, 0, 0.96236, 0);
+
+-- StarterGui.TowerOfHellGUI.Open/Close.UICorner
+G2L["16"] = Instance.new("UICorner", G2L["15"]);
+
+
+-- StarterGui.TowerOfHellGUI.LocalScript
+G2L["17"] = Instance.new("LocalScript", G2L["1"]);
+
+
+-- StarterGui.TowerOfHellGUI.Main.Welcome.WelcomePlayerScript
+local function C_4()
+local script = G2L["4"];
+	-- WelcomePlayerScript
+	local Players = game:GetService("Players")
+	local textLabel = script.Parent
+	
+	-- Function to update the welcome text
+	local function updateWelcomeText(player)
+	    textLabel.Text = "Welcome! " .. player.Name
+	end
+	
+	-- Connect to PlayerAdded event to update text for new players
+	Players.PlayerAdded:Connect(function(player)
+	    updateWelcomeText(player)
+	end)
+	
+	-- Update text for all existing players
+	for _, player in Players:GetPlayers() do
+	    updateWelcomeText(player)
+	end
+end;
+task.spawn(C_4);
+-- StarterGui.TowerOfHellGUI.Main.ImageLabel.SetProfilePictureScript
+local function C_6()
+local script = G2L["6"];
+	local Players = game:GetService("Players")
+	local LocalPlayer = Players.LocalPlayer
+	local imageLabel = script.Parent
+	
+	local function updateProfilePicture()
+	    local userId = LocalPlayer.UserId
+	    local thumbType = Enum.ThumbnailType.HeadShot
+	    local thumbSize = Enum.ThumbnailSize.Size420x420
+	    local content, isReady = Players:GetUserThumbnailAsync(userId, thumbType, thumbSize)
+	    
+	    if isReady then
+	        imageLabel.Image = content
+	    else
+	        warn("Profile picture is not ready yet.")
+	    end
+	end
+	
+	-- Update the profile picture when the script runs
+	updateProfilePicture()
+	
+	-- Optionally, you can update the profile picture whenever the player respawns
+	LocalPlayer.CharacterAdded:Connect(updateProfilePicture)
+end;
+task.spawn(C_6);
+-- StarterGui.TowerOfHellGUI.Main.Main.LocalScript
+local function C_a()
+local script = G2L["a"];
+	local Frame = script.Parent
+	
+	Frame.Active = true 
+	Frame.Draggable = true
+end;
+task.spawn(C_a);
+-- StarterGui.TowerOfHellGUI.Main.Main.Reset.ResetPlayerScript
+local function C_c()
+local script = G2L["c"];
+	local Players = game:GetService("Players")
+	
+	local button = script.Parent
+	
+	local function resetPlayer(player)
+	    if player and player.Character then
+	        local character = player.Character
+	        local humanoid = character:FindFirstChildOfClass("Humanoid")
+	        
+	        if humanoid then
+	            humanoid.Health = 0
+	        end
+	    end
+	end
+	
+	button.MouseButton1Click:Connect(function()
+	    local localPlayer = Players.LocalPlayer
+	    resetPlayer(localPlayer)
+	end)
+end;
+task.spawn(C_c);
+-- StarterGui.TowerOfHellGUI.Main.Main.GodMode.GodModeCollisionScript
+local function C_11()
+local script = G2L["11"];
+	local button = script.Parent
+	local Players = game:GetService("Players")
+	
+	local function disableCollision(character)
+	    for _, part in character:GetChildren() do
+	        if part:IsA("BasePart") then
+	            part.CanCollide = false
+	        end
+	    end
+	end
+	
+	local function enableGodMode(player)
+	    local character = player.Character or player.CharacterAdded:Wait()
+	    disableCollision(character)
+	    player.CharacterAdded:Connect(function(newCharacter)
+	        disableCollision(newCharacter)
+	    end)
+	end
+	
+	button.MouseButton1Click:Connect(function()
+	    for _, player in Players:GetPlayers() do
+	        enableGodMode(player)
+	    end
+	
+	    Players.PlayerAdded:Connect(function(player)
+	        enableGodMode(player)
+	    end)
+	end)
+end;
+task.spawn(C_11);
+-- StarterGui.TowerOfHellGUI.Main.Main.InfiniteJump.InfiniteJumpScript
+local function C_13()
+local script = G2L["13"];
+	local Players = game:GetService("Players")
+	local UserInputService = game:GetService("UserInputService")
+	
+	local button = script.Parent
+	
+	local function enableInfiniteJump(player)
+	    local character = player.Character or player.CharacterAdded:Wait()
+	    local humanoid = character:FindFirstChildOfClass("Humanoid")
+	
+	    if humanoid then
+	        humanoid:SetStateEnabled(Enum.HumanoidStateType.Jumping, true)
+	        humanoid:SetStateEnabled(Enum.HumanoidStateType.Freefall, true)
+	    end
+	
+	    UserInputService.JumpRequest:Connect(function()
+	        if humanoid then
+	            humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+	        end
+	    end)
+	end
+	
+	button.MouseButton1Click:Connect(function()
+	    local player = Players.LocalPlayer
+	    enableInfiniteJump(player)
+	end)
+	
+	Players.PlayerAdded:Connect(function(player)
+	    player.CharacterAdded:Connect(function()
+	        enableInfiniteJump(player)
+	    end)
+	end)
+	
+	for _, player in Players:GetPlayers() do
+	    player.CharacterAdded:Connect(function()
+	        enableInfiniteJump(player)
+	    end)
+	end
+end;
+task.spawn(C_13);
+-- StarterGui.TowerOfHellGUI.LocalScript
+local function C_17()
+local script = G2L["17"];
+	local SGui = script.Parent
+	local Frame = SGui:WaitForChild("Main")
+	local Button = SGui:WaitForChild("Open/Close")
+	
+	Button.MouseButton1Up:Connect(function()
+		Frame.Visible = not Frame.Visible
+	end)
+end;
+task.spawn(C_17);
+
+return G2L["1"], require;
